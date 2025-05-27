@@ -1,0 +1,148 @@
+@import "tailwindcss";
+@theme{
+    --color-primaryblue:#2A29FF ;
+    --color-primaryhovered: #301FF1;
+    --color-primaryYellow:#9ef34a;
+    --color-secondarygrey:#F6F6F6;
+    --color-body:#060606;
+    --color-primary-circle:#f6f6f6;
+    --color-secondary-circle:#CACACA;
+}
+
+*{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+.fade-animate{
+    animation: fade-in 0.8s linear ;
+    animation-timeline: view();
+    animation-range: entry  ;
+}
+
+.reload{
+    animation:reload 0.8s ease-out forwards ;
+    opacity: 0;
+    transform: translateY(50px)
+}
+.hidden-at-start{
+    opacity: 0;
+    transition: all 0.8s 0.3s ease-out;
+}
+.scale-on-scroll{
+    transform: scale(1.5);
+    transition: all 0.8s 0.3s ease-out;
+}
+.scale-effect{
+    transform: scale(1);
+}
+.from-right{
+    transform: translateX(30px);
+}
+.from-left{
+    transform: translateX(-30px);
+}
+.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+.load1{
+    animation: loading1 0.8s  ease-in-out forwards;
+}
+.load2{
+    animation: loading2 0.8s  ease-in-out forwards;
+}
+.load3{
+    animation: loading3 0.8s  ease-in-out forwards;
+}
+
+.load{
+    width: 0%;
+}
+.spin{
+    transition: all 0.4s ease;
+}
+
+@media screen and (min-width:768px) {
+    .drop-in-animation{
+    opacity: 0;
+    transform: translateY(-300px) rotateZ(20deg) rotateX(-10deg) rotateY(-10deg);
+    animation: dropIn 0.8s .5s ease-in-out forwards;
+
+}
+
+}
+@media screen and (max-width:758px) {
+    .reload-main{
+    animation:reload 0.8s ease-out forwards ;
+    opacity: 0;
+    transform: translateY(-100px)
+}
+
+}
+@keyframes reload {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+@keyframes dropIn {
+    to{
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg) rotateZ(0deg)  rotateY(0deg);
+    }
+    
+}
+@keyframes fade-in  {
+    from{
+        opacity: 0.5;
+        scale: 0.8;
+        
+    }
+    to{
+    scale: 1;
+    opacity: 1;
+    }
+}
+@keyframes loading1 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 95%;
+    }
+}
+@keyframes loading2 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 85%;
+    }
+}
+@keyframes loading3 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+@keyframes marquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+
+.slider-track {
+    animation: marquee 15s linear infinite;
+    
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: clip;
+}
