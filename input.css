@@ -110,7 +110,7 @@
         width: 0%;
     }
     100%{
-        width: 95%;
+        width: 75%;
     }
 }
 @keyframes loading2 {
@@ -118,7 +118,7 @@
         width: 0%;
     }
     100%{
-        width: 85%;
+        width: 60%;
     }
 }
 @keyframes loading3 {
@@ -126,7 +126,7 @@
         width: 0%;
     }
     100%{
-        width: 75%;
+        width: 40%;
     }
 }
 @keyframes marquee {
